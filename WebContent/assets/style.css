@@ -8,12 +8,23 @@
 
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--main-bg-color);color:var(--font-text-color);padding-bottom:2%;}
-h1{text-align:center;margin:0% 0% 0%;font-family:Nunito Sans;font-weight:100;color:var(--main-text-color);}
+h1{
+	text-align:center;
+	margin:0% 0% 0%;
+	font-family:Nunito Sans;
+	font-weight:100;
+	color:var(--main-text-color);
+	display: flex;
+	margin:1.5rem;
+    padding: 1.5rem;
+    justify-content: center;
+    box-shadow: 0 2px 5px 5px;
+	}
 
 
 
 .logo{
-	height:5em;
+	height:50px;
 	
 }
 
