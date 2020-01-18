@@ -11,7 +11,7 @@ body{background:var(--main-bg-color);color:var(--font-text-color);padding-bottom
 h1{
 	text-align:center;
 	margin:0% 0% 0%;
-	font-family:Nunito Sans;
+	font-family: 'Nunito Sans', sans-serif;
 	font-weight:100;
 	color:var(--main-text-color);
 	display: flex;
@@ -30,7 +30,7 @@ h1{
 
 .header,.footer{
 	display:flex;
-	font-family: Nunito Sans;
+	font-family: 'Nunito Sans', sans-serif;
 	flex-direction: row;
 	font-size: xx-large;
 	margin:1.5rem 1.5rem 1.5rem 1.5rem;
@@ -52,6 +52,7 @@ h1{
 }
 .question{
 	display:flex;
+	font-family: 'Nunito Sans', sans-serif;
 	flex-direction:column;
 	align-items:center;
 	border: 2px solid #ff8000;
@@ -71,7 +72,7 @@ h1{
     flex-flow: row reverse;
     padding:1.5rem 1.5rem 1.5rem 1.5rem;
     margin:1.5rem 1.5rem 1.5rem 1.5rem;
-   
+   font-family: 'Nunito Sans', sans-serif;
     font-size:medium;
   
 }
@@ -86,6 +87,8 @@ h1{
     padding:1.5rem 1.5rem 1.5rem 1.5rem;
     background:var(--background-color);
     margin:10px;
+    font-size:large;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .output{
@@ -99,4 +102,6 @@ h1{
     padding:1.5rem 1.5rem 1.5rem 1.5rem;
     background:var(--background-color);
     margin:10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size:large;
 }

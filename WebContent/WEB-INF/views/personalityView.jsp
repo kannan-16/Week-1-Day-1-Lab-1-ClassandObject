@@ -9,6 +9,8 @@
 </head>
 <body>
 <script type="text/javascript" type="module" src="/Week-1-Day-1-Lab-1/appscript/script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+
 <header class="header">
 <img class="logo" src="/Week-1-Day-1-Lab-1/assets/Logo.svg" alt="logo"></img>
 </header>

@@ -24,7 +24,7 @@ public String findPersonality(Person person) {
 	}
 	else if(sum>25 && sum<=35 ) {
 		
-		return "you are Searching for Happiness, instead of searching around you.Find the happiness which is inside you. Say all is well and get on with life. Now we are a Prograd so no worries be happyyyyy!!!!" ;
+		return "you are Searching for Happiness, instead of searching around you.Find the happiness which is inside you. Say all is well and get on with life. Now you are a Prograd so no worries be happyyyyy!!!!" ;
 	}
 	else {
 		
