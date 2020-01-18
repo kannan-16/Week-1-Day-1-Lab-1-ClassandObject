@@ -1,0 +1,91 @@
+:root{
+	--main-bg-color:white;
+	--main-text-color:black;
+	--background-color:lightgrey;
+}
+
+
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--main-bg-color);color:var(--font-text-color);padding-bottom:2%;}
+h1{text-align:center;margin:0% 0% 0%;font-family:Nunito Sans;font-weight:100;color:var(--main-text-color);}
+
+
+
+.logo{
+	height:5em;
+	
+}
+
+.header,.footer{
+	display:flex;
+	font-family: Nunito Sans;
+	flex-direction: row;
+	font-size: xx-large;
+	margin:1.5rem 1.5rem 1.5rem 1.5rem;
+	flex-wrap:wrap;
+	box-shadow: 0 2px 5px 5px;
+	position:relative
+	justify-content:center;
+	background:var(--background-color);
+	color:var(--main-text-color);
+}
+
+.quiz{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	background:var(--background-color);
+	margin:1.5rem;
+	
+}
+.question{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	border: 2px solid #ff8000;
+	margin: 2rem 2rem 2rem 2rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color:var(--main-text-color);
+    background:var(--background-color);
+}
+
+.options{
+	font-size:larger;
+}
+
+.button{
+	display: flex;
+    flex-flow: row reverse;
+    padding:1.5rem 1.5rem 1.5rem 1.5rem;
+    margin:1.5rem 1.5rem 1.5rem 1.5rem;
+   
+    font-size:medium;
+  
+}
+.mydetails{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:baseline;
+    box-sizing:content-box;
+    border:2px solid black;
+    padding:1.5rem 1.5rem 1.5rem 1.5rem;
+    background:var(--background-color);
+    margin:10px;
+}
+
+.output{
+		display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:baseline;
+    box-sizing:content-box;
+    border:2px solid black;
+    padding:1.5rem 1.5rem 1.5rem 1.5rem;
+    background:var(--background-color);
+    margin:10px;
+}
