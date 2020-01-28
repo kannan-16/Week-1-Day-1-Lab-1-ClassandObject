@@ -1,194 +1,104 @@
 package service;
 
-import java.time.LocalDate;
-import java.time.Period;
+//import the package for Local date and time (java --> time --> LocalDate)
+ 
+//import the package for period (java --> time --> Period)
 
-import model.Person;
+//import the package for person (model.person)
 
-public class PersonalityCalculator {
+//Create a public class called PersonalityCalculator
 
-public String toString(Person person) {
-	return "Name:"+person.getName()+"\nGender:"+person.getGender()+"\nDOB:"+person.getDob();
-}
+//Impart a toString method with a parameter person of type Person
+//Return name, gender and DOB as given below
+//Name: *User's Name*
+//Gender: *User's Gender*
+//DOB: *User's DOB*
 
-public String findPersonality(Person person) {
-	int sum=0;
-	sum=person.getQ1()+person.getQ2()+person.getQ3()+person.getQ4()+person.getQ5()+person.getQ6()+person.getQ7()+person.getQ8()+person.getQ9()+person.getQ10();
-	if(sum>45 && sum<=50) {
-		
-		return "you are a Very Very Happy Person! Everyone loves to enjoy with you and spend time with you.Welcome Aboard Prograd";
-	}
-	else if(sum>35 && sum <=45) {
+//Create a method called findPersonality of type String with the same parameter person of type Person
+/*This method would determine the personality of the person by a few computations 
+ that is to be defined inside the method*/
+
 	
-		return "you are Almost Happy but somethings in life quite disturb you a lot. Come on push aside your thoughts and enjoy your life Chap. Welcome aboard Prograd.Your life will be always happy and fun.";
-	}
-	else if(sum>25 && sum<=35 ) {
-		
-		return "you are Searching for Happiness, instead of searching around you.Find the happiness which is inside you. Say all is well and get on with life. Now you are a Prograd so no worries be happyyyyy!!!!" ;
-	}
-	else {
-		
-		return "you are Not Very Happy with your life. Don't think about your past. Think about your present and put your best efforts. You have a wonderful future.Now that you are a Prograd, there is no one Stopping you.Your future is what we build here";
-	}
-		
-}
-public String findSign(Person person) {
-	String[] date=String.valueOf(person.getDob()).split("-");
-	int day=Integer.parseInt(date[2]);
-	int month=Integer.parseInt(date[1]);
+//Declare a variable called sum and initialize it 0
+//This variable would sum the responses captured from the user
+
+//Now, sum all the values and assign it to the sum variable 
+//Revive the integer values(question's responses) using the getter method
+//Use the person object to call the getter methods from the person class
 	
-	System.out.println(day);
-	System.out.println(month);
-	String astro_sign=""; 
+//If sum is greater than 45 and lesser than or equal to 50 
+//return "You are contented with your life. Everyone is happy around you. Welcome aboard ProGrad"
+	
+//If sum is greater than 35 and lesser than or equal to 45
+//return "You are almost happy but something disturbs you. Push aside your thoughts and enjoy your life. Welcome aboard ProGrad".
+	
+//If sum is greater than 25 and lesser than or equal to 35
+//return "You are searching for happiness. Find the happiness in you. You are a Prograd now. So no worries be happyyyyy!!!!"".
+	
+//For all the other sum values
+//return "You are not very happy with your life. Don't think about your past. Think about your present and put your best efforts. You have a wonderful future. Now that you are a Prograd, it proves your worth. Your future is what we build here"
+	 
+
+//Create a method called findSign of String return type with the same parameter person of type Person
+
+//Create an array named date of type string, 
+
+//Split the dob by '-' and store it in the date array. Hope you know to split the string by a space. Extend the same by "-".
+
+//Store the day and month in 2 separate variables (Make sure that they are converted tp integer)
+
+//Print the day and month values using the two new variables created
+
+//Create a new String variable called astro_sign and assign null ("")
     
-    // checks month and date within the  
-    // valid range of a specified zodiac 
-    if (month == 12){ 
-          
-        if (day < 22) 
-        astro_sign = "Sagittarius"; 
-        else
-        astro_sign ="Capricorn"; 
-    } 
-          
-    else if (month == 1){ 
-        if (day < 20) 
-        astro_sign = "Capricorn"; 
-        else
-        astro_sign = "Aquarius"; 
-    } 
-          
-    else if (month == 2){ 
-        if (day < 19) 
-        astro_sign = "Aquarius"; 
-        else
-        astro_sign = "Pisces"; 
-    } 
-          
-    else if(month == 3){ 
-        if (day < 21)  
-        astro_sign = "Pisces"; 
-        else
-        astro_sign = "Aries"; 
-    } 
-    else if (month == 4){ 
-        if (day < 20) 
-        astro_sign = "Aries"; 
-        else
-        astro_sign = "Taurus"; 
-    } 
-          
-    else if (month == 5){ 
-        if (day < 21) 
-        astro_sign = "Taurus"; 
-        else
-        astro_sign = "Gemini"; 
-    } 
-          
-    else if( month == 6){ 
-        if (day < 21) 
-        astro_sign = "Gemini"; 
-        else
-        astro_sign = "Cancer"; 
-    } 
-          
-    else if (month == 7){ 
-        if (day < 23) 
-        astro_sign = "Cancer"; 
-        else
-        astro_sign = "Leo"; 
-    } 
-          
-    else if( month == 8){ 
-        if (day < 23)  
-        astro_sign = "Leo"; 
-        else
-        astro_sign = "Virgo"; 
-    } 
-          
-    else if (month == 9){ 
-        if (day < 23) 
-        astro_sign = "Virgo"; 
-        else
-        astro_sign = "Libra"; 
-    } 
-          
-    else if (month == 10){ 
-        if (day < 23) 
-        astro_sign = "Libra"; 
-        else
-        astro_sign = "Scorpio"; 
-    } 
-          
-    else if (month == 11){ 
-        if (day < 22) 
-        astro_sign = "Scorpio"; 
-        else
-        astro_sign = "Sagittarius"; 
-    } 
-          
-   return astro_sign;
-} 
-	
-	
-public String findYourMatch(Person person) {
+//Checks month and date within the valid range of a specified zodiac
 
-	String match=findSign(person);
-	String yourPartner="";
-	if(match.equalsIgnoreCase("Aries")) {
-		//yourPartner="Aquarius";
-		yourPartner="Chimpanzee";
-	}
-	else if(match.equalsIgnoreCase("Taurus")) {
-		//yourPartner="Cancer";
-		yourPartner="Orangutan";
-	}
-	else if(match.equalsIgnoreCase("Gemini")) {
-		//yourPartner="Aquarius";
-		yourPartner="Monkey";
-	}
-	else if(match.equalsIgnoreCase("Cancer")) {
-		//yourPartner="Pisces";
-		yourPartner="Pig";
-	}
-	else if(match.equalsIgnoreCase("Leo")) {
-		//yourPartner="Sagittarius";
-		yourPartner="Sloth bear";
-	}
-	else if(match.equalsIgnoreCase("Virgo")) {
-		//yourPartner="Taurus";
-		yourPartner="Macaque";
-	}
-	else if(match.equalsIgnoreCase("Libra")) {
-		//yourPartner="Gemini";
-		yourPartner="Gorilla";
-	}
-	else if(match.equalsIgnoreCase("Scorpio")) {
-		//yourPartner="Cancer";
-		yourPartner="Orangutan";
-	}
-	else if(match.equalsIgnoreCase("Sagittarius")) {
-		//yourPartner="Aries";
-		yourPartner="Baboon";
-	}
-	else if(match.equalsIgnoreCase("Capricorn")) {
-		//yourPartner="Taurus";
-		yourPartner="Baboon";
-	}
-	else if(match.equalsIgnoreCase("Aquarius")) {
-		//yourPartner="Gemini";
-		yourPartner="Chimpanzee";
-	}
-	else if(match.equalsIgnoreCase("Pisces")) {
-		//yourPartner="Scorpio";
-		yourPartner="Baboon";
-	}
-	return yourPartner;
-}
-public Period ageCalculator(Person person) {
-	LocalDate today=LocalDate.now();
-	Period age=Period.between(person.getDob(), today);
+//March 21 - April 20 --> Aries
+//April 21 - May 21 --> Taurus
+//May 22 - June 23 --> Gemini
+//June 24 - July 23 --> Cancer
+//July 24 - August 23 --> Leo
+//August 24 - September 22 --> Virgo
+//September 23 - October 23 --> Libra
+//October 24 - November 22 --> Scorpius
+//November 23 - December 21 --> Saggitarius
+//December 22 - January 19 --> Capricornus
+//January 20 - February 18 --> Aquarius
+//February 19 - March 20 --> Pisces
+
+//return the astro_sign          
+
+
+//Create a method named findYourMatch of String return type with the same parameter person of type Person
 	
-	return age;
-}
-}
+//Create a String variable named match that would receive the return value by calling the method findSign with the value as person.
+
+//Create an empty string variable named yourPartner
+
+//Assign a suitable partner for the respective zodiac signs as below. Use switch case or cascaded if to assign the values to yourPartner variable
+//Aries --> Chimpanzee
+//Taurus --> Orangutan
+//Gemini --> Monkey
+//Cancer --> Pig
+//Leo --> Sloth bear
+//Virgo --> Macaque
+//Libra --> Gorilla
+//Scorpio --> Orangutan
+//Sagittarius --> Baboon
+//Aquarius --> Chimpanzee
+//Pisces --> Baboon
+//Doesn't it sound wonderful. Do you feel like trying it with your friends? Take the blame!!!
+
+//return yourPartner 
+
+
+//Create the ageCalculator method of the type Period with a parameter person of type Person
+
+//Create a variable named today of type LocalDate and assign the current date.
+//Know the use of method now()
+
+//Calculate the age using the method between() and assign it to a new variable named age of type Period
+
+//return age
+
+//Note: Make sure that you uncomment the lines in PersonalityCalculator.java file

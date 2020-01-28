@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Person;
-import service.PersonalityCalculator;
+//Uncomment the below lines
+//import model.Person;
+//import service.PersonalityCalculator;
 
 
 @WebServlet(urlPatterns= {"/personality"})
@@ -34,7 +35,8 @@ public class PersonalityViewController extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	//Uncomment the below lines
+		/*
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-mm-yyyy");
 		String name=request.getParameter("name");
 		String gender=request.getParameter("gender");
@@ -83,7 +85,6 @@ public class PersonalityViewController extends HttpServlet {
 			request.setAttribute("match", match);
 			request.setAttribute("age", age);
 			rd.forward(request, response);
-		}
+		}*/
 	}
-
 }
